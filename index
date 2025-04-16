@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI應用工具</title>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #2c3e50;
+            padding: 30px 0;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: top;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        td:hover {
+            transform: translateY(-3px);
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0;
+            list-style: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        /* 密碼保護樣式 */
+        #content {
+            display: none;
+        }
+
+        #password-prompt {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        #password-input {
+            padding: 10px;
+            width: 200px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #27ae60;
+        }
+
+        /* 響應式設計 */
+        @media screen and (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th {
+                border-radius: 8px 8px 0 0;
+            }
+
+            td {
+                border-radius: 0 0 8px 8px;
+                position: relative;
+                padding-left: 15px;
+            }
+
+            td:before {
+                content: attr(data-label);
+                display: block;
+                font-weight: bold;
+                color: #3498db;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="password-prompt">
+        <h2>請輸入密碼</h2>
+        <input type="password" id="password-input" placeholder="輸入密碼">
+        <button onclick="checkPassword()">提交</button>
+    </div>
+
+    <div id="content">
+        <h1>AI應用工具</h1>
+        <div class="container">
+            <table>
+                <tr>
+                    <th>小學</th>
+                    <th>初一</th>
+                    <th>初二</th>
+                    <th>初三</th>
+                    <th>美術</th>
+                </tr>
+                <tr>
+                    <td data-label="小學">
+                        <ul>
+                      
+                                 <li><a href="p1math2digitsumtool3.html">小學數學-兩位數進位輔助</a></li>
+                     
+                        </ul>
+                    </td>
+                    <td data-label="初一">
+                        <ul>
+                            <li><a href="grade7_page1.html">初一連結1未生成</a></li>
+                            <li><a href="grade7_page2.html">初一連結2未生成</a></li>
+                        </ul>
+                    </td>
+                    <td data-label="初二">
+                        <ul>
+                 
+                            <li><a href="f2scientific mar.html">科學記數法-整數指數幂</a></li>
+                            <li><a href="f2pyththeorm.html">勾股定理演示</a></li>
+                   
+                             <li><a href="f2mathpyththeoremcaleasy.html">勾股定理計算練習（容易）</a></li>
+               
+                        
+                          <li><a href="f2mathpyththeoremConverseeasy2.html">勾股定理逆定理(容易)</a></li>
+                            </ul>
+                    </td>
+                    <td data-label="初三">
+                        <ul>
+                            <li><a href="f3mandala.html">中心對稱圖形設計</a></li>
+                            <li><a href="f3roll.html">拋骰模擬器</a></li>
+                
+                             <li><a href="f3mathprojecttheoremeasy.html">射影定理練習容易</a></li>
+                        </ul>
+                    </td>
+                    <td data-label="美術">
+                        <ul>
+                            <li><a href="f22point.html">2點透視</a></li>
+          
+                             <li><a href="f7artqrcode.html">二維碼生成器</a></li>
+                            <li><a href="f7toolsmark2.html">入分工具2</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password-input').value;
+            const correctPassword = 'aaa';
+            
+            if (password === correctPassword) {
+                document.getElementById('password-prompt').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert('密碼錯誤，請重新輸入！');
+            }
+        }
+
+        document.getElementById('password-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+        <footer>
+        <p>&copy; 2025 ukawai</p>
+    </footer>
+</body>
+</html>
